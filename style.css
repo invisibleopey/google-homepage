@@ -48,5 +48,49 @@ table {
 }
 
 /* My Styling starts here */
-
+html {
+	font-family: arial,sans-serif
+}
 /* Header Styling */
+header {
+	padding-top: 1.5em;
+	padding-right: 1em;
+}
+.nav-bar ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.nav-bar li {
+	display: inline-block;
+	margin-left: 1em;
+}
+.nav-bar a {
+	text-decoration: none;
+	color: rgba(0,0,0,0.87);
+	font-weight: 400;
+	font-size: smaller;
+}
+.nav-bar a:hover {
+	text-decoration: underline;
+}
+.nav-bar.apps {
+	background-color: transparent;
+	padding: 10px;
+}
+.nav-bar .apps:hover {
+	/* Problem with the padding of the apps on hover */
+	background-color: #5f6368;
+	border-radius: 50%;
+}
+.nav-bar .user {
+	padding: 7px;
+	background-color:rgb(116, 70, 70);
+	border-radius: 50%;
+	color: white;
+}
+.nav-bar .user:hover {
+	/* Problem with the hover state border, 
+	jumping out of the outline */
+	/* border: 2px solid white; */
+}
