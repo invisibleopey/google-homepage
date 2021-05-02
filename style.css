@@ -94,3 +94,22 @@ header {
 	jumping out of the outline */
 	/* border: 2px solid white; */
 }
+
+/* Main Body Styling */
+main {
+	height: 70vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+
+}
+main .logo {
+	max-width: 100%;
+    height: auto;
+}
+/* Search Bar */
