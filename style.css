@@ -49,10 +49,21 @@ table {
 
 /* My Styling starts here */
 html {
-	font-family: arial,sans-serif
+	font-family: arial,sans-serif;
+	color: rgba(0,0,0,0.87);
+	font-weight: 500;
+	font-size: smaller;
 }
-/* Header Styling */
+
+/* My Styling starts here */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+ /*Header Styling */
 header {
+	flex: 0 0 10vh;
 	padding-top: 1.5em;
 	padding-right: 1em;
 }
@@ -79,7 +90,7 @@ header {
 	padding: 10px;
 }
 .nav-bar .apps:hover {
-	/* Problem with the padding of the apps on hover */
+	/* Problem with the padding of the apps on hover */ 
 	background-color: #5f6368;
 	border-radius: 50%;
 }
@@ -92,24 +103,90 @@ header {
 .nav-bar .user:hover {
 	/* Problem with the hover state border, 
 	jumping out of the outline */
-	/* border: 2px solid white; */
+	border: 2px solid white;
 }
-
-/* Main Body Styling */
 main {
-	height: 70vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.content {
+	flex: 0 0 70vh;
+	text-align: center;
+	/* align-self: center;
+	width: 70vw;
+	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
-
+	justify-content: center;
+	align-items: center; */
 }
-main .logo {
+#logo {
+	margin-top: 4.3em;
 	max-width: 100%;
-    height: auto;
+	height: auto;
 }
-/* Search Bar */
+ /*Search Bar */ 
+.search-container {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #dedfe0;
+	display: flex;
+
+	width: 35%;
+	height: 2em;
+	border-radius: 24px;
+	padding: 5px 8px 0 16px;
+}
+.search-container:hover {
+	box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.34);
+}
+.search-container input[type="search"] {
+	width: 100%;
+	height: 2em;
+	background-color: transparent;
+	border: none;
+}
+.search-container input[type="search"]:focus {
+	outline: none;
+}
+.search-container .submit {
+	height: 40px;
+	margin-bottom: 1em;
+}
+.submit input[type="submit"] {
+		background-color: #f8f9fa;
+		border: 1px solid #f8f9fa;
+		border-radius: 4px;
+		color: #3c4043;
+		font-family: arial,sans-serif;
+		font-size: 14px;
+		margin: 11px 4px;
+		padding: 0 16px;
+		line-height: 27px;
+		height: 36px;
+		min-width: 54px;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+}
+.submit input[type="submit"]:hover {
+	border: 1px solid #dedfe0;
+}
+
+.languages {
+	margin-top: 1em;
+	display: inline-block;
+}
+.languages a {
+	padding: 0 3px;
+	text-decoration: none;
+	font-weight: 400;
+	font-size:small;
+}
+.languages a:hover {
+	text-decoration: underline;
+}
+
+
+
+footer {
+	flex: 0 0 20vh;
+}
