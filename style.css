@@ -223,7 +223,7 @@ footer span {
 	font-size: 14px;
 	color: #70757a;
 }
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
 	footer {
 		flex-direction: column;
 		align-items: center;
