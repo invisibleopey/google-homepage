@@ -53,11 +53,18 @@ html {
 	color: rgba(0,0,0,0.87);
 	font-weight: 500;
 	font-size: smaller;
+	height: 100%;
+	width: 100%;
 }
-
-/* My Styling starts here */
+  body {
+	height: 100%;
+	width: 100%;
+  }
 
 .wrapper {
+	height: 100%;
+	margin: 0px auto;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }
@@ -106,7 +113,8 @@ header {
 	border: 2px solid white;
 }
 main {
-	flex: 0 0 70vh;
+	flex: 1 0 auto;
+	padding: 20px;
 	text-align: center;
 	/* align-self: center;
 	width: 70vw;
@@ -130,17 +138,20 @@ main {
 	border: 1px solid #dedfe0;
 	display: flex;
 
-	width: 35%;
-	height: 2em;
+	width: 40%;
+	height: 2.8em;
 	border-radius: 24px;
 	padding: 5px 8px 0 16px;
+}
+.search-container > * {
+	align-self: center;
 }
 .search-container:hover {
 	box-shadow: 2px 3px 7px 1px rgba(0,0,0,0.34);
 }
 .search-container input[type="search"] {
 	width: 100%;
-	height: 2em;
+	height: 2.8em;
 	background-color: transparent;
 	border: none;
 }
@@ -152,20 +163,19 @@ main {
 	margin-bottom: 1em;
 }
 .submit input[type="submit"] {
-		background-color: #f8f9fa;
-		border: 1px solid #f8f9fa;
-		border-radius: 4px;
-		color: #3c4043;
-		font-family: arial,sans-serif;
-		font-size: 14px;
-		margin: 11px 4px;
-		padding: 0 16px;
-		line-height: 27px;
-		height: 36px;
-		min-width: 54px;
-		text-align: center;
-		cursor: pointer;
-		user-select: none;
+	background-color: #f8f9fa;
+	border: 1px solid #f8f9fa;
+	border-radius: 4px;
+	color: #3c4043;
+	font-size: 14px;
+	margin: 11px 4px;
+	padding: 0 16px;
+	line-height: 27px;
+	height: 36px;
+	min-width: 54px;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
 }
 .submit input[type="submit"]:hover {
 	border: 1px solid #dedfe0;
@@ -185,8 +195,32 @@ main {
 	text-decoration: underline;
 }
 
+.country {
+	background: #f2f2f2;
+	padding: 10px;
+	font-size: large;
+	border-bottom: 1px solid rgb(218, 220, 224);
+	};
+}
 
-
-footer {
-	flex: 0 0 20vh;
+#footer {
+	border: 1px solid red;
+	background-color: #0e0d0d;
+	flex-shrink: 0;
+	padding: 20px;
+	display: flex;
+	justify-self: center;
+	flex-direction: row;
+}
+#footer .left {
+	width: 250px;
+}
+#footer .center {
+	width: 250px;
+}
+#footer .right {
+	width: 250px;
+}
+#footer li {
+	display: inline-block;
 }
