@@ -62,15 +62,16 @@ html {
   }
 
 .wrapper {
-	height: 100%;
-	margin: 0px auto;
+	min-height: 100%;
+	margin: 0px;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	align-items: stretch; /* Solution to not being able to style footer */
 }
  /*Header Styling */
 header {
-	flex: 0 0 10vh;
+	flex: 0;
 	padding-top: 1.5em;
 	padding-right: 1em;
 }
@@ -113,7 +114,7 @@ header {
 	border: 2px solid white;
 }
 main {
-	flex: 1 0 auto;
+	flex: 1;
 	padding: 20px;
 	text-align: center;
 	/* align-self: center;
@@ -195,32 +196,34 @@ main {
 	text-decoration: underline;
 }
 
-.country {
-	background: #f2f2f2;
-	padding: 10px;
-	font-size: large;
-	border-bottom: 1px solid rgb(218, 220, 224);
-	};
-}
-
-#footer {
-	border: 1px solid red;
-	background-color: #0e0d0d;
-	flex-shrink: 0;
-	padding: 20px;
+footer {
 	display: flex;
-	justify-self: center;
-	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
 }
-#footer .left {
-	width: 250px;
-}
-#footer .center {
-	width: 250px;
-}
-#footer .right {
-	width: 250px;
-}
-#footer li {
+footer li {
 	display: inline-block;
+}
+footer a {
+	text-decoration: none;
+	color: #70757a;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 5px;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer h3 {
+	font-size: 14px;
+	color: #70757a;
+}
+@media (max-width: 500px) {
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+	footer .center {
+		order: -1;
+	}
 }
